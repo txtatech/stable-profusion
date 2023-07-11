@@ -39,12 +39,14 @@ The Stable-Profusion program uses the following external crates:
 web-view: A Rust library for building web view applications.
 The dependencies are specified in the Cargo.toml file and will be automatically fetched and built by Cargo.
 
-Additional Notes
+### Additional Notes:
+
 The code was written and tested with the specified Rust toolchain version.
 
 For more information about Stable-Profusion and its usage, please refer to the GitHub repository.
 
 https://github.com/txtatech/stable-profusion
+
 ![Example Image 1](https://github.com/txtatech/stable-profusion/blob/main/s-p-Example-1.png)
 ![Example Image 2](https://github.com/txtatech/stable-profusion/blob/main/s-p-Example-2.png)
 
