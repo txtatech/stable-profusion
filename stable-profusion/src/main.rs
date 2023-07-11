@@ -11,34 +11,61 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     );
 
     let dark_css = r#"
-        <style>
-            body {
-                background-color: #222;
-                color: #fff;
-            }
-
-            body.dark-mode {
-                background-color: #111;
-                color: #fff;
-            }
-
-            body.dark-mode a {
-                color: #fff;
-            }
-
-            body.dark-mode .separator {
-                color: #999;
-            }
-
-            body.dark-mode .versions {
-                color: #ff9800;
-            }
-
-            /* Specific dark mode styles for iframe */
-            #ssb-container.dark-mode iframe {
-                filter: invert(1);
-            }
-        </style>
+      <style>
+         body.dark-mode {
+         background-color: #111;
+         color: #fff;
+         }
+         body.dark-mode a {
+         color: #fff;
+         }
+         body.dark-mode .separator {
+         color: #999;
+         }
+         body.dark-mode .versions {
+         color: #ff9800;
+         }
+         /* Specific dark mode styles for iframe */
+         #ssb-container.dark-mode iframe {
+         filter: invert(1);
+         }
+         table {
+         border-collapse: collapse;
+         }
+         table td {
+         padding: 2px;
+         }
+         input[type="text"] {
+         background-color: #333;
+         color: #fff;
+         border: none;
+         padding: 5px;
+         }
+         button {
+         background-color: #444;
+         color: #fff;
+         border: none;
+         padding: 2px 2px;
+         cursor: pointer;
+         }
+         textarea {
+         background-color: #333;
+         color: #fff;
+         border: none;
+         padding: 2px;
+         resize: none;
+         font-size: 1.0em;
+         width: 100%;
+         }
+         .ssb-wrapper {
+         transform: scale(.99);
+         position: relative; /* Set the position of the wrapper to relative */
+         margin-bottom: 10px;
+         margin-left: 1px;
+         margin-right: 1px;
+         margin-top: 10px;
+         }
+      </style>
     "#;
 
     let html_with_dark_theme = format!("{}{}", dark_css, html_with_textbox);

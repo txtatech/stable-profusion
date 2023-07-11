@@ -1,86 +1,34 @@
 <html>
    <head>
-      <style>
-         body {
-         background-color: #222;
-         color: #fff;
-         }
-         table {
-         border-collapse: collapse;
-         }
-         table td {
-         padding: 8px;
-         }
-         input[type="text"] {
-         background-color: #333;
-         color: #fff;
-         border: none;
-         padding: 5px;
-         }
-         button {
-         background-color: #444;
-         color: #fff;
-         border: none;
-         padding: 8px 8px;
-         cursor: pointer;
-         }
-         a {
-         color: #6cd6ff;
-         }
-         textarea {
-         background-color: #333;
-         color: #fff;
-         border: none;
-         padding: 5px;
-         resize: none;
-         font-size: 1.0em;
-         width: 100%;
-         }
-         .ssb-wrapper {
-         transform: scale(.99);
-         position: relative; /* Set the position of the wrapper to relative */
-         margin-bottom: 10px;
-         margin-left: 1px;
-         margin-right: 1px;
-         margin-top: 10px;
-         }
-      </style>
    </head>
    <body class="dark-mode">
       <table>
          <tr>
             <td>
                <input type="text" id="url-input1" placeholder="Enter URL1" value="http://127.0.0.1:7860">
-            </td>
-            <td>
                <button onclick="openNewWebView('url-input1')">Web</button>
-            </td>
-            <td>
                <button onclick="loadSSB('url-input1')">SSB</button>
-            </td>
-            <td>
                <input type="text" id="url-input" placeholder="Enter URL" value="http://127.0.0.1:8989">
-            </td>
-            <td>
                <button onclick="openNewWebView('url-input')">Web</button>
-            </td>
-            <td>
                <button onclick="loadSSB('url-input')">SSB</button>
             </td>
-            <td><button onclick="toggleFullscreen()">Fullscreen</button></td>
+            <td><button onclick="reload()">Reload</button></td>
+            <td><button onclick="stop()">Stop</button></td>
             <td><button onclick="goBack()">Back</button></td>
             <td><button onclick="goForward()">Forward</button></td>
-            <td><button onclick="stop()">Stop</button></td>
-            <td><button onclick="reload()">Reload</button></td>
-            <td><button onclick="inspectElement()">Inspect Element</button></td>
-            <td><input type="text" id="search-input" placeholder="Enter search query"></td>
-            <td><button onclick="conductSearch()">Search</button></td>
+         <td><button onclick="toggleFullscreen()">Fullscreen</button></td>
+         <td><button onclick="inspectElement()">Inspect</button></td>
+         <td><a href="http://127.0.0.1:7860">SD-7860</a>
+         <a href="http://127.0.0.1:7861">SD-7861</a>
+         <a href="http://127.0.0.1:8989">SD-8989</a></td>
          </tr>
       </table>
       <div>
-         <a href="http://127.0.0.1:7860">SD-7860</a>
-         <a href="http://127.0.0.1:7861">SD-7861</a>
-         <a href="http://127.0.0.1:8989">SD-8989</a>
+         <select id="url-history" onchange="loadURLFromHistory()">
+         <option value="">History</option>
+         </select>
+         <td><input type="text" id="search-input" placeholder="Enter search query"></td>
+         <td><button onclick="conductSearch()">Search</button></td>
       </div>
       <div id="ssb-container"></div>
       <h6>+ Prompt:</h6>
@@ -101,6 +49,63 @@
            }
          }
          
+      </script>
+      <script>
+         let urlHistory = [];
+         
+         function openNewWebView(inputId) {
+             const urlInput = document.getElementById(inputId);
+             const url = urlInput.value.trim();
+         
+             if (url !== '') {
+                 if (inputId === 'url-input' || inputId === 'url-input1') {
+                     // Update the URL in the current web view using JavaScript
+                     window.location.href = url;
+                 } else {
+                     // Open the URL in a new web view
+                     window.open(url);
+                 }
+                 // Add the URL to the history array
+                 addToUrlHistory(url);
+             }
+         }
+         
+         function addToUrlHistory(url) {
+             // Check if the URL is already in the history
+             const index = urlHistory.indexOf(url);
+             if (index !== -1) {
+                 // If the URL exists, remove it from its current position
+                 urlHistory.splice(index, 1);
+             }
+             // Add the URL at the beginning of the history array
+             urlHistory.unshift(url);
+             // Update the select element with the new history
+             updateUrlHistorySelect();
+         }
+         
+         function updateUrlHistorySelect() {
+             const urlHistorySelect = document.getElementById('url-history');
+             // Clear the select element
+             urlHistorySelect.innerHTML = '<option value="">History</option>';
+             // Add options for each URL in the history array
+             for (let i = 0; i < urlHistory.length; i++) {
+                 const url = urlHistory[i];
+                 const option = document.createElement('option');
+                 option.value = url;
+                 option.text = url;
+                 urlHistorySelect.appendChild(option);
+             }
+         }
+         
+         function loadURLFromHistory() {
+             const urlHistorySelect = document.getElementById('url-history');
+             const selectedUrl = urlHistorySelect.value;
+             if (selectedUrl !== '') {
+                 // Update the URL input field with the selected URL
+                 const urlInput = document.getElementById('url-input');
+                 urlInput.value = selectedUrl;
+             }
+         }
       </script>
       <script>
          function openNewWebView(inputId) {
@@ -179,6 +184,7 @@
          const currentWindow = window.parent;
          currentWindow.document.documentElement.classList.add('inspect-element');
          }
+         
       </script>
    </body>
 </html>
