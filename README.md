@@ -42,9 +42,14 @@ This will compile and launch the web view application.
 
 ### Dependencies:
 
+[dependencies]
+web-view = "*"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0.64"
+
 The Stable-Profusion program uses the following external crates:
 
-web-view: A Rust library for building web view applications.
+web-view is a Rust library for building web view applications.
 The dependencies are specified in the Cargo.toml file and will be automatically fetched and built by Cargo.
 
 ### Additional Notes:
