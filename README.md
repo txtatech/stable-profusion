@@ -4,6 +4,8 @@ A low memory overlay and web browser for working with local instances of stable-
 
 Stable-Profusion is a web view application written in Rust. It allows you to create a simple web view window and interact with web content using JavaScript.
 
+It is designed to work with: https://github.com/AUTOMATIC1111/stable-diffusion-webui
+
 ### Prerequisites
 
 - Rust toolchain nightly-x86_64-unknown-linux-gnu (default)
@@ -39,3 +41,6 @@ The code was written and tested with the specified Rust toolchain version.
 For more information about Stable-Profusion and its usage, please refer to the GitHub repository.
 
 https://github.com/txtatech/stable-profusion
+
+![Example Image 1](https://github.com/txtatech/stable-profusion/blob/main/s-p1.png)
+![Example Image 2](https://github.com/txtatech/stable-profusion/blob/main/s-p2.png)
