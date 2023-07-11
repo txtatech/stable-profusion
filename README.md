@@ -10,8 +10,6 @@ There is a + Prompt, - Prompt, and 'scratch pad' text area below where the ifram
 
 The search feature resolves to https://search.brave.com
 
-Stable-Profusion is a web view application written in Rust. It allows you to create a simple web view window and interact with web content using JavaScript.
-
 It is designed to work with [https://github.com/AUTOMATIC1111/stable-diffusion-webui](https://github.com/AUTOMATIC1111/stable-diffusion-webui).
 
 ### Prerequisites:
