@@ -12,7 +12,7 @@ The search feature resolves to https://search.brave.com
 
 Stable-Profusion is a web view application written in Rust. It allows you to create a simple web view window and interact with web content using JavaScript.
 
-It is designed to work with: https://github.com/AUTOMATIC1111/stable-diffusion-webui
+It is designed to work with [https://github.com/AUTOMATIC1111/stable-diffusion-webui](https://github.com/AUTOMATIC1111/stable-diffusion-webui).
 
 ### Prerequisites:
 
@@ -51,12 +51,12 @@ The dependencies are specified in the Cargo.toml file and will be automatically 
 
 The code was written and tested with the specified Rust toolchain version.
 
-For more information about Stable-Profusion and its usage, please refer to the GitHub repository.
-
-https://github.com/txtatech/stable-profusion
-
 ![Example Image 1](https://github.com/txtatech/stable-profusion/blob/main/s-p-Example-1.png)
 ![Example Image 2](https://github.com/txtatech/stable-profusion/blob/main/s-p-Example-2.png)
 
 ![Small Window Example Image 1](https://github.com/txtatech/stable-profusion/blob/main/s-p1.png)
 ![Small Window Example Image 2](https://github.com/txtatech/stable-profusion/blob/main/s-p2.png)
+
+For more information about Stable-Profusion and its usage, please refer to the GitHub repository.
+
+[https://github.com/txtatech/stable-profusion](https://github.com/txtatech/stable-profusion),
