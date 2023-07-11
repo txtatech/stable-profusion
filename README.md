@@ -1,6 +1,6 @@
 ## stable-profusion
 
-A low memory overlay and web browser for working with local instances of stable-diffusion.
+A low memory overlay and web browser for working with local instances of stable-diffusion-webui.
 
 This application acts as an overlay that can load multiple iframes (one below the other) on the main page for specified urls.
 
