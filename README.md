@@ -2,6 +2,14 @@
 
 A low memory overlay and web browser for working with local instances of stable-diffusion.
 
+This application acts as an overlay that can load multiple iframes (one below the other) on the main page for specified urls.
+
+There are various navigation and web browsing features but please note that not all features will work on all platforms. 
+
+There is a + Prompt, - Prompt, and 'scratch pad' text area below where the iframes are loaded.
+
+The search feature resolves to https://search.brave.com
+
 Stable-Profusion is a web view application written in Rust. It allows you to create a simple web view window and interact with web content using JavaScript.
 
 It is designed to work with: https://github.com/AUTOMATIC1111/stable-diffusion-webui
