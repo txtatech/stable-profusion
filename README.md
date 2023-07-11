@@ -6,12 +6,16 @@ Stable-Profusion is a web view application written in Rust. It allows you to cre
 
 It is designed to work with: https://github.com/AUTOMATIC1111/stable-diffusion-webui
 
-### Prerequisites
+### Prerequisites:
+
+rustc 1.72.0-nightly (d9c13cd45 2023-07-05)
 
 - Rust toolchain nightly-x86_64-unknown-linux-gnu (default)
 - rustc 1.72.0-nightly (d9c13cd45 2023-07-05)
 
-### Installation and Running
+
+
+### Installation and Running:
 
 1. Clone the Stable-Profusion repository:
 
@@ -28,7 +32,7 @@ cargo +nightly run --release
 
 This will compile and launch the web view application.
 
-Dependencies
+### Dependencies:
 
 The Stable-Profusion program uses the following external crates:
 
