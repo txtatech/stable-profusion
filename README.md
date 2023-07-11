@@ -45,6 +45,8 @@ The code was written and tested with the specified Rust toolchain version.
 For more information about Stable-Profusion and its usage, please refer to the GitHub repository.
 
 https://github.com/txtatech/stable-profusion
+![Example Image 1](https://github.com/txtatech/stable-profusion/blob/main/s-p-Example-1.png)
+![Example Image 2](https://github.com/txtatech/stable-profusion/blob/main/s-p-Example-2.png)
 
-![Example Image 1](https://github.com/txtatech/stable-profusion/blob/main/s-p1.png)
-![Example Image 2](https://github.com/txtatech/stable-profusion/blob/main/s-p2.png)
+![Small Window Example Image 1](https://github.com/txtatech/stable-profusion/blob/main/s-p1.png)
+![Small Window Example Image 2](https://github.com/txtatech/stable-profusion/blob/main/s-p2.png)
