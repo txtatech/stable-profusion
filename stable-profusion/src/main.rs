@@ -5,7 +5,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     let html_template = include_str!("../assets/index.html");
     let html_template1 = include_str!("../assets/index1.html");
     let html_with_textbox = format!(
-        "{}<br><input type=\"text\" id=\"input\" style=\"width: 1290px; height: 40px; font-size: 1.25em;\">",
+        "{}<br><input type=\"text\" id=\"input\" style=\"width: 1360px; height: 20px; font-size: 1.25em;\">",
 
         html_template
     );
