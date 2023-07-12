@@ -5,65 +5,65 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     let html_template = include_str!("../assets/index.html");
     let html_template1 = include_str!("../assets/index1.html");
     let html_with_textbox = format!(
-        "{}<br><input type=\"text\" id=\"input\" style=\"width: 1290px; height: 40px; font-size: 1.25em;\">
-        <script src=\"zornz.js\"></script>",
+        "{}<br><input type=\"text\" id=\"input\" style=\"width: 1290px; height: 40px; font-size: 1.25em;\">",
+
         html_template
     );
 
     let dark_css = r#"
       <style>
          body.dark-mode {
-         background-color: #111;
-         color: #fff;
+            background-color: #111;
+            color: #fff;
          }
          body.dark-mode a {
-         color: #fff;
+            color: #fff;
          }
          body.dark-mode .separator {
-         color: #999;
+            color: #999;
          }
          body.dark-mode .versions {
-         color: #ff9800;
+            color: #ff9800;
          }
          /* Specific dark mode styles for iframe */
          #ssb-container.dark-mode iframe {
-         filter: invert(1);
+            filter: invert(1);
          }
          table {
-         border-collapse: collapse;
+            border-collapse: collapse;
          }
          table td {
-         padding: 2px;
+            padding: 2px;
          }
          input[type="text"] {
-         background-color: #333;
-         color: #fff;
-         border: none;
-         padding: 5px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 5px;
          }
          button {
-         background-color: #444;
-         color: #fff;
-         border: none;
-         padding: 2px 2px;
-         cursor: pointer;
+            background-color: #444;
+            color: #fff;
+            border: none;
+            padding: 2px 2px;
+            cursor: pointer;
          }
          textarea {
-         background-color: #333;
-         color: #fff;
-         border: none;
-         padding: 2px;
-         resize: none;
-         font-size: 1.0em;
-         width: 100%;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 2px;
+            resize: none;
+            font-size: 1.0em;
+            width: 100%;
          }
          .ssb-wrapper {
-         transform: scale(.99);
-         position: relative; /* Set the position of the wrapper to relative */
-         margin-bottom: 10px;
-         margin-left: 1px;
-         margin-right: 1px;
-         margin-top: 10px;
+            transform: scale(.99);
+            position: relative; /* Set the position of the wrapper to relative */
+            margin-bottom: 10px;
+            margin-left: 1px;
+            margin-right: 1px;
+            margin-top: 10px;
          }
       </style>
     "#;
