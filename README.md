@@ -12,6 +12,10 @@ The search feature resolves to https://search.brave.com
 
 It is designed to work with [https://github.com/AUTOMATIC1111/stable-diffusion-webui](https://github.com/AUTOMATIC1111/stable-diffusion-webui).
 
+There a lightweight zero install HTML only version of Stable-Profusion-Lite here:
+
+https://github.com/txtatech/stable-profusion-lite
+
 ### Prerequisites:
 
 rustc 1.72.0-nightly (d9c13cd45 2023-07-05)
